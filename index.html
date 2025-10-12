@@ -1,33 +1,287 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Путешествия с Марией</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-  <h1>Практические задания</h1> 
-  <ol>
-        <li>
-          <a href="task.html">Практическое задание №1</a></li>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-with-photo">
+                    <img src="foto.Мария.png" alt="Мария" class="profile-photo">
+                    <a href="#main" class="logo">Путешествия с <span>Марией</span></a>
+                </div>         
+                <ul class="nav-links">
+                    <li><a href="#main">Главная</a></li>
+                    <li><a href="#travels">Мои путешествия</a></li>
+                    <li><a href="#photos">Фото стран</a></li>
+                    <li><a href="#recommendations">Рекомендации</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="hero"  id="main">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="gradient-text">Привет, я Мария!</h1>
+                <p class="subtitle">Страстная путешественница и блогер</p>
+                <p>Добро пожаловать в мой блог о путешествиях. Здесь я делюсь своими приключениями, советами и вдохновением для ваших поездок.</p>
+                <a href="#travels" class="btn rounded-btn">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+    <section class="travel-map" id="travels">
+        <div class="container">
+            <h2>Карта моих путешествий</h2>
+            <div id="map"></div>
+        </div>
+    </section>
+    <section class="country-photos" id="photos">
+        <div class="container">
+            <h2>Фото стран</h2>
+            <div class="photos-grid">
+                <div class="photo-card">
+                    <img src="Париж.webr" alt="Франция">
+                    <div class="photo-info">
+                        <h3>Франция</h3>
+                        <p>Эйфелева башня и улочки Парижа</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="Германия-Берлин.webr" alt="Германия">
+                    <div class="photo-info">
+                        <h3>Германия</h3>
+                        <p>Кафедральный собор в Берлине</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="Рим.webr" alt="Италия">
+                    <div class="photo-info">
+                        <h3>Италия</h3>
+                        <p>Фонтан Треви в Риме</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images Испания.jpg" alt="Испания">
+                    <div class="photo-info">
+                        <h3>Испания</h3>
+                        <p>Кафедральный собор Сантьяго-де-Компостела</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="Токио.webp" alt="Япония">
+                    <div class="photo-info">
+                        <h3>Япония</h3>
+                        <p>Храм Сенсодзи в Токио</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images Тайланд.jpg" alt="Таиланд">
+                    <div class="photo-info">
+                        <h3>Таиланд</h3>
+                        <p>Храмы многорукого Будды в Ват Плай Лаем </p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="США -Нью -Йорк.webp" alt="США">
+                    <div class="photo-info">
+                        <h3>США</h3>
+                        <p> Статуя Свободы на острове Либерти. Нью-Йорк</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="Санторини.webr" alt="Греция">
+                    <div class="photo-info">
+                        <h3>Греция</h3>
+                        <p>Остров Санторини в Эгейском море. Греция</p>
+                    </div>                       
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="recommendations" id="recommendations">
+        <div class="container">
+            <h2>Мои рекомендации</h2>
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Отели</h3>
+                    <p>Лучшие отели с отличным соотношением цены и качества</p>
+                </div>
+                <div class="recommendation-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Рестораны</h3>
+                    <p>Местная кухня и атмосферные места для ужина</p>
+                </div>
+                <div class="recommendation-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Маршруты</h3>
+                    <p>Оптимальные маршруты для осмотра достопримечательностей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contacts">
+        <div class="container">
+            <h2>Свяжитесь со мной</h2>
+            <p>Если у вас есть вопросы или предложения о сотрудничестве, напишите мне!</p>
+            
+            <div class="contact-container">
+                <div class="social-contact">
+                    <h3>Социальные сети</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            Instagram
+                        </a>
+                        <a href="https://telegram.org" target="_blank" class="social-link">
+                            <i class="fab fa-telegram"></i>
+                            Telegram
+                        </a>
+                        <a href="mailto:maria.travel@example.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Форма обратной связи</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Ваш email</label>
+                            <input type="email" id="email" placeholder="Введите ваш email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Ваше сообщение</label>
+                            <textarea id="message" placeholder="Введите ваше сообщение"></textarea>
+                        </div>
+                        <button type="submit" class="btn rounded-btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О блоге</h3>
+                    <p>Блог о путешествиях, вдохновении и приключениях. Присоединяйтесь к моим странствиям по миру!</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-envelope"></i> maria.travel@example.com</p>
+                    <p><i class="fas fa-phone"></i> +7 (123) 456-78-90</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="mailto:maria.travel@example.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <p><a href="#main">Главная</a></p>
+                    <p><a href="#travels">Мои путешествия</a></p>
+                    <p><a href="#photos">Фото стран</a></p>
+                    <p><a href="#recommendations">Рекомендации</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Путешествия с Марией. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
 
-        <li>
-          <a href="task2.html">Практическое задание №2</a></li>
-          
-        <li>
-          <a href="task3.html">Практическое задание №3</a></li>
-          
-      <li>
-          <a href="task4.html">Практическое задание №4</a></li>
-       <li>
-          <a href="index.html">Итоговое задание</a></li>
-      
+    <script>
+        function initMap() {
+            const map = L.map('map').setView([48.8566, 2.3522], 2);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
 
-  </ol>
-      
+            const visitedCountries = [
+                {lat: 48.8566, lng: 2.3522, name: 'Франция', city: 'Париж'},
+                {lat: 52.5200, lng: 13.4050, name: 'Германия', city: 'Берлин'},
+                {lat: 41.9028, lng: 12.4964, name: 'Италия', city: 'Рим'},
+                {lat: 40.4168, lng: -3.7038, name: 'Испания', city: 'Мадрид'},
+                {lat: 35.6762, lng: 139.6503, name: 'Япония', city: 'Токио'},
+                {lat: 13.7563, lng: 100.5018, name: 'Таиланд', city: 'Бангкок'},
+                {lat: 40.7128, lng: -74.0060, name: 'США', city: 'Нью-Йорк'},
+                {lat: 37.9838, lng: 23.7275, name: 'Греция', city: 'Афины'}
+            ];
+
+            visitedCountries.forEach(country => {
+                L.marker([country.lat, country.lng])
+                    .addTo(map)
+                    .bindPopup(`<b>${country.name}</b><br>${country.city}`)
+                    .openPopup();
+            });
+        }
+
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+        
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваше сообщение отправлено.');
+            this.reset();
+        });
+
+        document.addEventListener('DOMContentLoaded', initMap);
+    </script>
+    <script>
+        function smoothScrollTo(target) {
+            const element = document.querySelector(target);
+            if (element) {
+                const offsetTop = element.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                if (target !== '#') {
+                    smoothScrollTo(target);
+                }
+            });
+        });
+    </script>
 </body>
-
-</html>
-
-
-
+</html>             html {
+        scroll-behavior: smooth;
+    }
